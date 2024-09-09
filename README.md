@@ -1,151 +1,151 @@
+# 예제로 배우는 Django 4
 
+<img src="https://www.youngjin.com/images/book_cover/9788931474435.jpg" height="350px" style="border: 2px solid grey;">
 
+[예제로 배우는 Django 4(영진닷컴)](https://blog.naver.com/ydot/223324247963)
 
-# Django 4 by Example
+『예제로 배우는 Django 4』는 블로그, 소셜 웹사이트, 온라인 상점, e-러닝 플랫폼 등 활용도 넘치는 4가지 예제와 함께 Django를 차근차근 배워 본다. 파이썬을 갓 뗀 분에게도 좋고, 이미 Django를 배웠지만 레퍼런스급 예제를 연습하고 다른 기술과 연계하여 나만의 Django 앱을 확장하고자 하는 용도로 읽기에도 좋다.
 
-[<img src="https://djangobyexample.com/static/v4/img/django_by_example_4_cover.png" style="width:200px;"  align="left">](https://djangobyexample.com/)
+이 도서는 실습 파트로만 이루어진 완전 실습형 도서로, 처음부터 예제 프로그램을 만들며 Django의 사용법을 자연스럽게 익힐 수 있도록 구성한 도서이다. 다행히 처음 1~3장부터 어려운 예제 프로그램을 만들지는 않고, 간단한 블로그를 만든다. 물론 Django로 만드는 만큼 웹페이지 부분만을 만들지는 않는다. 기본적인 MTV 패턴부터 쿼리셋, 데이터베이스를 이용한 전문 검색 기능과 같이 백엔드의 요소 또한 다룬다.
 
-[![GitHub stars](https://img.shields.io/github/stars/PacktPublishing/Django-4-by-example)](https://github.com/PacktPublishing/Django-4-by-example/stargazers)
+그 뒷장부터는 본격적으로 다양한 프로그램을 만든다. 온라인 상점, e-러닝 플랫폼과 같은 앞으로의 프로젝트의 기초로 사용하기 좋은 실용성 좋은 예제가 준비되어 있다. 단순히 겉모습만 묘사하는 선에서 배우지 않고, 소셜 웹사이트라면 소셜 인증, 온라인 상점이라면 외부 결제 모듈 사용법, e-러닝 플랫폼이라면 학생 등록 시스템 구현 등 실제 개발 시 알아 두어야 할 중요 관련 기술이나 구현법도 함께 알려준다.
 
-This is the code repository for [Django 4 by Example](https://djangobyexample.com/), written by [Antonio Melé](https://antoniomele.es/) and published by [Packt](https://www.packtpub.com/product/django-4-by-example/9781801813051). It contains all the supporting project files necessary to work through the book from start to finish.
+감이 잘 오지 않는다면, 깊게 고민하지 말고 우선 책을 펼쳐 예제를 타이핑해 보기를 바란다. 중간중간 커피 한 모금 곁들이면 더 좋다. 800 페이지 이상의 분량에 걸쳐 4개의 프로젝트를 쉴 새 없이 만들다 보면 어느새 Django가 확실히 손에 익어 있을 것이다.
 
+**저자** 안토니오 멜레  
+**역자** 김성원  
+**발행일** 2024년 03월 05일   
+**크기** 188*257mm   
+**쪽수** 856쪽  
+**가격** 38,000원  
+**ISBN** 9788931474435  
 
+<br>
 
-## Instructions
-The code is organised into directories with the chapter number. For example, `Chapter02` contains the source code for chapter 2. Each chapter folder has a `requirements.txt` file that includes all packages required to run the code of that chapter. These can be installed with the command `pip install -r requirements.txt`.
+## 안내
+코드는 각 장의 번호에 따라 디렉토리로 구성되어 있습니다. 예를 들어, `Chapter02`는 2장의 소스 코드를 포함하고 있습니다. 각 장의 폴더에는 해당 장의 코드를 실행하기 위해 필요한 모든 패키지를 포함한 `requirements.txt` 파일이 있습니다. 이 패키지들은 `pip install -r requirements.txt` 명령어로 설치할 수 있습니다.
 
+<br>
 
-## About the Book
+## 요구 사항
+이 책은 Python 3.10+와 Django 4.1을 필요로 합니다.
 
-**Django 4 by Example** (4th edition) will guide you through the entire process of developing professional web applications with Django. The book not only covers the most relevant aspects of the framework, but it will also teach you how to integrate other popular technologies into your Django projects.
+<br>
 
-The book will walk you through the creation of four real-world applications, solving common problems, and implementing best practices, using a step-by-step approach that is easy to follow.
+## 정오표
+- 1장, *그림 1.4*에서 `body` 필드는 `ForeignKey` 대신 `TextField`여야 합니다.
+- 16장, 647쪽의 `ASGI_APPLICATION = 'educa.routing.application'`은 `ASGI_APPLICATION = 'educa.asgi.application'`으로 수정되어야 합니다.
 
-After reading this book, you will have a good understanding of how Django works and how to build practical, advanced web applications.
+<br>
 
-## Requirements
+## Django 프로젝트
 
-This book requires Python 3.10+ and Django 4.1.
+이 책에서는 네 가지 Django 프로젝트로 나누어진 다양한 웹 애플리케이션 개발 주제를 다룹니다:
 
-## Django Projects
+- **블로그 애플리케이션** (1~3장): 완전한 블로그 애플리케이션 만들기
+  - 데이터 모델, 뷰, URL 생성
+  - 블로그 관리 사이트 구현
+  - 모델에 대한 표준 URL 사용 및 게시물에 대한 SEO 친화적인 URL 구현
+  - 게시물 페이지네이션 구축 및 클래스 기반 뷰 생성 학습
+  - 폼을 사용해 독자가 이메일로 게시물을 공유할 수 있도록 하고 모델 폼을 사용한 댓글 시스템 구현
+  - [django-taggit](https://github.com/jazzband/django-taggit)을 사용해 게시물에 태그 추가 및 공유 태그 기반 유사 게시물 추천
+  - 최신 게시물 및 댓글이 많은 게시물을 표시하는 커스텀 템플릿 태그 구현
+  - [Markdown](https://github.com/Python-Markdown/markdown)을 렌더링하는 커스텀 템플릿 필터 구현
+  - 블로그를 위한 사이트맵 및 RSS 피드 생성
+  - PostgreSQL을 사용한 전체 텍스트 검색 엔진 구현
 
-The book covers a wide range of web app development topics divided into four different Django projects:
+- **소셜 웹사이트** (4~7장): 이미지를 북마크하고 공유하는 웹사이트 만들기
+  - Django 인증 프레임워크를 사용한 인증 구현
+  - 사용자 모델을 커스텀 프로필 모델로 확장
+  - Django 메시지 프레임워크 사용
+  - 커스텀 인증 백엔드 구축
+  - [Python Social Auth](https://github.com/python-social-auth/social-app-django)를 사용해 Facebook, Twitter, Google을 통한 소셜 인증(OAuth2) 구현
+  - [django-extensions](https://github.com/django-extensions/django-extensions)를 사용해 HTTPS를 통한 개발 서버 실행
+  - [easy-thumbnails](https://github.com/SmileyChris/easy-thumbnails)를 사용해 이미지 썸네일 생성
+  - 모델에서 다대다 관계 구현
+  - JavaScript와 Django로 북마크릿 구축
+  - JavaScript Fetch API와 Django를 사용한 비동기 HTTP 요청 추가
+  - 무한 스크롤 페이지네이션 구현
+  - 사용자 팔로우 시스템 구축
+  - 사용자 활동 스트림 생성 및 QuerySet 최적화
+  - Django 신호(signals) 사용법 학습
+  - [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)를 사용해 디버그 정보 확인
+  - [Redis](https://redis.io/)를 사용해 이미지 조회수 카운트
+  - Redis로 이미지 순위 시스템 구축
 
-- **Blog Application** (chapters 1-3): Create a complete blog application
-  - Build data models, views, and URLs
-  - Implement an administration site for your blog
-  - Use canonical URLs for modles and implement SEO-friendly URLs for posts
-  - Build post pagination and learn how to create class-based views
-  - Use forms to allow readers to share posts via email and implement a comment system using model forms
-  - Add tags to posts using [django-taggit](https://github.com/jazzband/django-taggit) and recommend similar posts based on shared tags
-  - Implement custom template tags to display latest posts and most commented posts
-  - Implement a custom template filter to render [Markdown](https://github.com/Python-Markdown/markdown)
-  - Create a sitemap and a RSS feed for your blog
-  - Implement a full-text search engine using PostgreSQL
+- **전자상거래 애플리케이션** (8~11장): 완전한 기능의 온라인 쇼핑몰 구축
+  - 제품 카탈로그 모델 구축
+  - Django 세션을 사용한 쇼핑 카트 생성
+  - 커스텀 컨텍스트 프로세서 생성
+  - 고객 주문 관리
+  - [Celery](https://docs.celeryq.dev/)와 [RabbitMQ](https://www.rabbitmq.com/)를 사용한 비동기 알림 전송
+  - [Flower](https://github.com/mher/flower)를 사용해 Celery 모니터링
+  - [Stripe](https://stripe.com/)와 통합해 결제 처리
+  - Stripe의 결제 알림을 수신하기 위한 웹훅 구현
+  - Django 관리 사이트에서 커스텀 뷰 생성
+  - 관리자 작업(admin actions) 생성 및 CSV 파일 생성
+  - [Weasyprint](https://weasyprint.org/)을 사용해 동적으로 PDF 인보이스 생성
+  - 주문에 할인 적용을 위한 쿠폰 시스템 구현
+  - Stripe 결제와 할인 통합
+  - Redis를 사용한 제품 추천 엔진 구축
+  - 쇼핑몰에 국제화 적용
+  - 번역 파일 생성 및 관리
+  - [Rosetta](https://github.com/mbi/django-rosetta)를 사용해 번역 관리
+  - URL 패턴 번역 및 언어 선택기 생성
+  - [django-parler](https://github.com/django-parler/django-parler)를 사용해 모델 번역
+  - [django-localflavor](https://github.com/django/django-localflavor)를 사용해 폼 현지화
 
-- **Social Website** (chapters 4-7): Create a website to bookmark and share images
-  - Implement authentication using the Django authentication framework
-  - Extend the user model with a custom profile model
-  - Use the Diango messages framework
-  - Build a custom authentication backend
-  - Implement social authentication (OAuth2) with Facebook, Twitter, and Google using [Python Social Auth](https://github.com/python-social-auth/social-app-django)
-  - Use [django-extensions](https://github.com/django-extensions/django-extensions) to run the development server through HTTPS
-  - Generate image thumbnails with [easy-thumbnails](https://github.com/SmileyChris/easy-thumbnails)
-  - Implement many-to-many relationships in models
-  - Build a JavaScript bookmarklet with JavaScript and Django
-  - Add asynchronous HTTP requests with the JavaScript Fetch API and Django
-  - Implement infinite scroll pagination
-  - Build a user follow system
-  - Create a user activity stream and optimize QuerySets
-  - Learn to use Django signals
-  - Use [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) to obtain relevant debug information
-  - Count image views with [Redis](https://redis.io/)
-  - Build an image ranking with Redis
+- **e러닝 플랫폼** (12~17장): CMS를 포함한 e러닝 플랫폼 구축
+  - 강의 모델 생성
+  - 데이터 픽스처 사용
+  - 모델 상속을 사용해 다형성 콘텐츠 생성
+  - 강의 콘텐츠를 정렬하기 위한 커스텀 모델 필드 구현
+  - 인증 뷰 구현
+  - 클래스 기반 뷰와 믹스인을 사용해 콘텐츠 관리 시스템 구축
+  - 그룹과 권한을 사용해 접근 제한
+  - 폼세트를 사용해 강의 콘텐츠 관리
+  - JavaScript와 Django를 사용해 콘텐츠를 인라인에서 드래그 앤 드롭하여 재정렬 기능 구현
+  - [django-braces](https://github.com/brack3t/django-braces)에서 제공하는 제네릭 믹스인 사용
+  - 공개 뷰 및 학생 등록 뷰 구현
+  - 다양한 유형의 콘텐츠 렌더링 및 [django-embed-video](https://github.com/jazzband/django-embed-video) 사용
+  - 캐시 프레임워크를 사용해 콘텐츠 캐시
+  - [Memcached](https://memcached.org/) 및 Redis 캐시 백엔드 사용
+  - [django-redisboard](https://github.com/ionelmc/django-redisboard)를 사용해 Redis 모니터링
+  - [Django REST Framework](https://www.django-rest-framework.org/)을 사용해 API 구축
+  - 모델을 위한 시리얼라이저 생성 및 커스텀 API 뷰 생성
+  - API 인증 및 권한 처리
+  - API 뷰셋 및 라우터 구축
+  - Python [requests](https://github.com/psf/requests)를 사용해 API 소비
+  - Django [Channels](https://github.com/django/channels)를 사용해 실시간 채팅 서버 구축
+  - Django 및 JavaScript로 WebSocket 소비자/클라이언트 구현
+  - Redis를 사용해 채널 레이어 설정
+  - 완전히 비동기 WebSocket 구현
+  - 여러 환경을 위한 설정 생성
+  - PostgreSQL, Redis, [Nginx](https://www.nginx.com/), [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/) 및 [Daphne](https://github.com/django/daphne)를 포함한 [Docker Compose](https://docs.docker.com/compose/)를 사용해 프로덕션 환경 설정
+  - HTTPS를 통해 프로젝트를 안전하게 제공
+  - Django 시스템 검사 프레임워크 사용
+  - 커스텀 미들웨어 구축
+  - 커스텀 관리 명령어 생성
 
-- **Ecommerce Application** (chapters 8-11): Create a fully-featured on-line shop
-  - Build the models of the product catalog
-  - Create a shopping cart using Django sessions
-  - Create custom context processors
-  - Manage customer orders
-  - Send asynchronous notifications using [Celery](https://docs.celeryq.dev/) and [RabbitMQ](https://www.rabbitmq.com/)
-  - Monitory Celery using [Flower](https://github.com/mher/flower)
-  - Integrate [Stripe](https://stripe.com/) to process payments
-  - Implement a webhook to receive payment notifications from Stripe
-  - Build custom views in the Django administration site
-  - Create admin actions and generate CSV files
-  - Generate PDF invoices dynamically using [Weasyprint](https://weasyprint.org/)
-  - Create a coupon system to apply disconts to orders
-  - Integrate discounts with Stripe payments
-  - Build a product recommendation engine using Redis
-  - Add internationalization to the shop
-  - Generate and manage translation files
-  - Use [Rosetta](https://github.com/mbi/django-rosetta) to manage translations
-  - Translate URL patterns and build a language selector
-  - Translate models using [django-parler](https://github.com/django-parler/django-parler)
-  - Localize forms using [django-localflavor](https://github.com/django/django-localflavor)
+<br>
 
-- **eLearning Platform** (chapters 12-17): Create an eLearning platform including a CMS
-  - Build course models
-  - Create and use data fixtures
-  - Use model inheritance to create polymorphic Content
-  - Create a custom model field to order course contents
-  - Implement authentication views
-  - Build a content management system using class-based views and mixins
-  - Restrict access using groups and permissions
-  - Build formsets to manage course contents
-  - Create drag-and-drop functionality to reorder content in-place using JavaScript and Django
-  - Using generic mixins from [django-braces](https://github.com/brack3t/django-braces)
-  - Implement public views and student enrolment views
-  - Render different type of contents and use [django-embed-video](https://github.com/jazzband/django-embed-video)
-  - Cache content using the cache framework
-  - Use the [Memached](https://memcached.org/) and Redis cache backends
-  - Monitor Redis using [django-redisboard](https://github.com/ionelmc/django-redisboard)
-  - Build an API using [Django REST Framework](https://www.django-rest-framework.org/)
-  - Create serializers for models and custom API views
-  - Handle API authentication and permissions
-  - Build API viewsets and routers
-  - Consume your API using Python [requests](https://github.com/psf/requests)
-  - Create a real-time chat server using Django [Channels](https://github.com/django/channels)
-  - Implement a WebSocket consumer/client using Django and JavaScript
-  - Use Redis to set up a channel layer
-  - Make your WebSocket fully-asynchronous
-  - Create settings for multiple environments
-  - Configure a production environment using [Docker Compose](https://docs.docker.com/compose/) with PostgreSQL, Redis, [Nginx](https://www.nginx.com/), [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/) and [Daphne](https://github.com/django/daphne)
-  - Serve your project securely through HTTPS
-  - Use the Django system check framework
-  - Build a custom middleware
-  - Create custom management commands
+## 중간 단계 코드 스니펫
+[작업 진행 중] 메인 챕터 디렉토리에는 각 장의 완성된 코드만 포함되어 있습니다. [Snippets](https://github.com/PacktPublishing/Django-4-by-example/tree/main/Snippets) 디렉토리에는 각 장의 특정 단계에서 나타나는 코드 파일이 포함되어 있습니다.
 
-## Code Snippets for Intermediate Steps
-[Work in progress] Main chapter directories contain only the finished code for each chapter. The [Snippets](https://github.com/PacktPublishing/Django-4-by-example/tree/main/Snippets) directory contains code files as they appear for a given stage of each chapter.
+장에 대한 중간 파일이 있는 경우, 각 섹션에 대한 하위 폴더 내 `chXX` 폴더에서 해당 파일들을 찾을 수 있습니다. 특정 파일에 대한 수정이 최종 버전과 일치하는 경우, 해당 파일은 중간 파일 트리에 포함되지 않습니다.
 
-Where there are interim files for the chapter, you can find those files in the `chXX` folder within a sub-folder for each section. Where the edit to a particular file brings it in line with the final version, that file is not included in the interim tree.
+변경된 라인은 주석으로 표시됩니다. 전체 블록이 새로 추가되거나 변경된 경우, 변경된 라인의 끝에 해시태그(#)가 표시됩니다.
 
-Changed lines are marked with a comment. Where an entire block is new or changed, there is a hashtag on the line following the end of changed lines.
+`filename_00.py`와 같은 파일명은 편집이 적용되기 전의 자동 생성 파일이며, 이는 정보 제공 목적으로만 존재합니다.
 
-Filenames like `filename_00.py` are the auto-generated files before any edits are applied, they exist for informational purposes only.
+<br>
 
-## Community & Support
+## 💡실습용 예제 파일 & 소스 코드
+도서 실습에 필요한 예제 파일과 소스 코드는 챕터별로 구성하였으며, 깃허브 저장소뿐만 아니라 [영진닷컴 홈페이지](https://www.youngjin.com/reader/pds/pds.asp)에서도 다운로드받을 수 있습니다.  
+코드 작성 시에는 코드를 직접 입력하거나, 책에서 제공하는 소스 코드 파일을 사용하세요.
 
-Join the book [Discord Community](https://discord.gg/PQ7UYX9VTx) to participate in the ongoing discussions or/and initiate a new one. You will find other developers reading the book alongside and helping each other with questions.
+<br>
 
-## Source Code for Previous Editions
-- [Django 3 by Example](https://github.com/PacktPublishing/Django-3-by-Example)
-- [Django 2 by Example](https://github.com/PacktPublishing/Django-2-by-Example)
-- [Django by Example](https://github.com/PacktPublishing/Django-by-Example)
-
-## Editions in Other Languages
-While the 4th edition of the book is translated to other languages, you can find translations for the previous editions:
-- Simplified Chinese: [Django 3项目实例精解](http://www.tup.tsinghua.edu.cn/wap/tsxqy.aspx?id=08886201)
-- Brazilian Portuguese: [Aprenda Django 3 com Exemplos](https://novatec.com.br/livros/aprenda-django3-com-exemplos/)
-- Polish: [Django 3. Praktyczne tworzenie aplikacji sieciowych. Wydanie III](https://helion.pl/ksiazki/django-3-praktyczne-tworzenie-aplikacji-sieciowych-wydanie-iii-antonio-mel,dj3pt3.htm#format/d)
-- Serbo-Croatian-Bosnian: [Django 3 kroz primere, prevod III izdanja](https://knjige.kombib.rs/django-3-kroz-primere-prevod-iii-izdanja)
-- Spanish: [Django 2](https://www.amazon.es/Django-2-Antonio-Mel%C3%A9/dp/8426727484)
-- Russian: [Django 2 в примерах](https://dmkpress.com/catalog/computer/programming/python/978-5-97060-746-6/)
-
-## Download a free PDF
-If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost. Simply click on the link to claim your free PDF: [https://packt.link/free-ebook/9781801813051](https://packt.link/free-ebook/9781801813051)
-
-## Errata
-- Chapter 1, in *Figure 1.4* the `body` field should be `TextField` instead of `ForeignKey`.
-- Chapter 16, page 647 line `ASGI_APPLICATION = 'educa.routing.application'` should be `ASGI_APPLICATION = 'educa.asgi.application'`.
+## 💡문의 및 정오표
+- [문의](mailto:Support@youngjin.com)
+- [정오표](https://www.youngjin.com/Artyboard/mboard.asp?strBoardID=errata)
