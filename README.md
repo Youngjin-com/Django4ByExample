@@ -130,7 +130,7 @@
 <br>
 
 ## 중간 단계 코드 스니펫
-[작업 진행 중] 메인 챕터 디렉토리에는 각 장의 완성된 코드만 포함되어 있습니다. [Snippets](https://github.com/PacktPublishing/Django-4-by-example/tree/main/Snippets) 디렉토리에는 각 장의 특정 단계에서 나타나는 코드 파일이 포함되어 있습니다.
+메인 챕터 디렉토리에는 각 장의 완성된 코드만 포함되어 있습니다. [Snippets](https://github.com/PacktPublishing/Django-4-by-example/tree/main/Snippets) 디렉토리에는 각 장의 특정 단계에서 나타나는 코드 파일이 포함되어 있습니다.
 
 장에 대한 중간 파일이 있는 경우, 각 섹션에 대한 하위 폴더 내 `chXX` 폴더에서 해당 파일들을 찾을 수 있습니다. 특정 파일에 대한 수정이 최종 버전과 일치하는 경우, 해당 파일은 중간 파일 트리에 포함되지 않습니다.
 
