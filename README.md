@@ -22,23 +22,23 @@
 
 <br>
 
-## 안내
+## 💡안내
 코드는 각 장의 번호에 따라 디렉토리로 구성되어 있습니다. 예를 들어, `Chapter02`는 2장의 소스 코드를 포함하고 있습니다. 각 장의 폴더에는 해당 장의 코드를 실행하기 위해 필요한 모든 패키지를 포함한 `requirements.txt` 파일이 있습니다. 이 패키지들은 `pip install -r requirements.txt` 명령어로 설치할 수 있습니다.
 
 <br>
 
-## 요구 사항
+## 💡요구 사항
 이 책은 Python 3.10+와 Django 4.1을 필요로 합니다.
 
 <br>
 
-## 정오표
+## 💡정오표
 - 1장, *그림 1.4*에서 `body` 필드는 `ForeignKey` 대신 `TextField`여야 합니다.
 - 16장, 647쪽의 `ASGI_APPLICATION = 'educa.routing.application'`은 `ASGI_APPLICATION = 'educa.asgi.application'`으로 수정되어야 합니다.
 
 <br>
 
-## Django 프로젝트
+## 💡Django 프로젝트
 
 이 책에서는 네 가지 Django 프로젝트로 나누어진 다양한 웹 애플리케이션 개발 주제를 다룹니다:
 
@@ -129,7 +129,7 @@
 
 <br>
 
-## 중간 단계 코드 스니펫
+## 💡중간 단계 코드 스니펫
 메인 챕터 디렉토리에는 각 장의 완성된 코드만 포함되어 있습니다. [Snippets](https://github.com/PacktPublishing/Django-4-by-example/tree/main/Snippets) 디렉토리에는 각 장의 특정 단계에서 나타나는 코드 파일이 포함되어 있습니다.
 
 장에 대한 중간 파일이 있는 경우, 각 섹션에 대한 하위 폴더 내 `chXX` 폴더에서 해당 파일들을 찾을 수 있습니다. 특정 파일에 대한 수정이 최종 버전과 일치하는 경우, 해당 파일은 중간 파일 트리에 포함되지 않습니다.
