@@ -1,6 +1,6 @@
 # 예제로 배우는 Django 4
 
-<img src="https://www.youngjin.com/images/book_cover/9788931474435.jpg" height="350px" style="border: 2px solid grey;">
+<img src="https://www.youngjin.com/images/book_cover/9788931474435.png" height="350px" style="border: 2px solid grey;">
 
 [예제로 배우는 Django 4(영진닷컴)](https://blog.naver.com/ydot/223324247963)
 
